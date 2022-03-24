@@ -45,9 +45,15 @@ const AppHeader = () => {
       </div>
 
       <div class="wallet-holder">
-        <button type="button" onClick={toggleConnectWallet}>
+        <button
+          type="button"
+          className="wallet-button"
+          onClick={toggleConnectWallet}
+        >
           {userAddress ? (
-            <div className="w-60 truncate">{userAddress}</div>
+            <div className="w-60 truncate" title="Disconnect Wallet">
+              {userAddress}
+            </div>
           ) : (
             <div>🏦 CONNECT WALLET</div>
           )}
