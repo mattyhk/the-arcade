@@ -34,16 +34,6 @@ const AppHeader = () => {
     <>
       <NavMenu />
 
-      <div className="logo-wrapper">
-        <a href="/#">
-          <img
-            src="https://0xmons.xyz/assets/0xmons-logo-simple-med.png"
-            id="logo"
-            alt=""
-          />
-        </a>
-      </div>
-
       <div className="wallet-holder">
         <button
           type="button"
