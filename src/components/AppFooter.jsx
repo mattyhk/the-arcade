@@ -3,9 +3,9 @@ import "../styles/components/footer.css";
 
 const AppFooter = () => {
   return (
-    <div class="container">
-      <div class="footer">
-        <div class="footer-item">
+    <div className="container">
+      <div className="footer">
+        <div className="footer-item">
           <a
             href="https://www.coingecko.com/en/coins/xmon"
             target="_blank"
@@ -14,7 +14,7 @@ const AppFooter = () => {
             Coingecko
           </a>
         </div>
-        <div class="footer-item">
+        <div className="footer-item">
           <a
             href="https://discord.gg/8qtbuKjKfG"
             target="_blank"
@@ -23,7 +23,7 @@ const AppFooter = () => {
             Discord
           </a>
         </div>
-        <div class="footer-item">
+        <div className="footer-item">
           <a
             href="https://github.com/0xmons"
             target="_blank"
@@ -32,7 +32,7 @@ const AppFooter = () => {
             GitHub
           </a>
         </div>
-        <div class="footer-item">
+        <div className="footer-item">
           <a
             href="https://opensea.io/assets/0xmons-xyz"
             target="_blank"
@@ -41,7 +41,7 @@ const AppFooter = () => {
             OpenSea
           </a>
         </div>
-        <div class="footer-item">
+        <div className="footer-item">
           <a
             href="https://t.me/xmonschat"
             target="_blank"
@@ -50,7 +50,7 @@ const AppFooter = () => {
             Telegram
           </a>
         </div>
-        <div class="footer-item">
+        <div className="footer-item">
           <a
             href="https://twitter.com/0xmons"
             target="_blank"
@@ -59,7 +59,7 @@ const AppFooter = () => {
             Twitter
           </a>
         </div>
-        <div class="footer-item">
+        <div className="footer-item">
           <a
             href="https://v2.info.uniswap.org/token/0x3aada3e213abf8529606924d8d1c55cbdc70bf74"
             target="_blank"

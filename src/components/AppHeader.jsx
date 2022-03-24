@@ -34,7 +34,7 @@ const AppHeader = () => {
     <>
       <NavMenu />
 
-      <div class="logo-wrapper">
+      <div className="logo-wrapper">
         <a href="/#">
           <img
             src="https://0xmons.xyz/assets/0xmons-logo-simple-med.png"
@@ -44,7 +44,7 @@ const AppHeader = () => {
         </a>
       </div>
 
-      <div class="wallet-holder">
+      <div className="wallet-holder">
         <button
           type="button"
           className="wallet-button"

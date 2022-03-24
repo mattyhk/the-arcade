@@ -79,7 +79,7 @@ const Hero = () => {
       </div>
 
       <div className="button-holder centered opensea-bar">
-        <button className="view-button" routerLink="/all">
+        <button className="view-button">
           View All 0xmons <span className="xmon-squid">🦑</span>
         </button>
         <button className="opensea-button">
