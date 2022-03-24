@@ -1,9 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import NavMenu from "./NavMenu";
 import "../styles/components/header.css";
+import { useMoralis } from "react-moralis";
 
 const AppHeader = () => {
-  async function connectWallet() {}
+  const { Moralis, isInitialized } = useMoralis();
+  const [userAddress, setUserAddress] = useState("");
+
+  useEffect(() => {
+    if (!isInitialized) return;
+    const user = Moralis.User.current();
+    if (user) {
+      setUserAddress(user.get("ethAddress"));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isInitialized]);
+
+  async function toggleConnectWallet() {
+    try {
+      if (userAddress) {
+        await Moralis.User.logOut();
+        await Moralis.cleanup();
+        window.location.reload();
+        return;
+      }
+      await Moralis.enableWeb3();
+      await Moralis.authenticate({ signingMessage: "Authenticate on 0xmons" });
+      setUserAddress(Moralis?.User?.current()?.get("ethAddress") ?? "");
+    } catch {}
+  }
 
   return (
     <>
@@ -20,11 +45,12 @@ const AppHeader = () => {
       </div>
 
       <div class="wallet-holder">
-        <button type="button" onClick={connectWallet}>
-          <div className="if-connected">
-            {/* {{wallet.userAddress.substring(0, 14)}} */}
-          </div>
-          <div className="if-not-connected">🏦 CONNECT WALLET</div>
+        <button type="button" onClick={toggleConnectWallet}>
+          {userAddress ? (
+            <div className="w-60 truncate">{userAddress}</div>
+          ) : (
+            <div>🏦 CONNECT WALLET</div>
+          )}
         </button>
       </div>
     </>
