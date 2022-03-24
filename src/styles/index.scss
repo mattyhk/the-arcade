@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Lucida Console", "Courier New", Courier, monospace;
+  src: url("./fonts/lucida-console.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Courier Prime", monospace;
+}
