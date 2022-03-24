@@ -3,19 +3,12 @@ import "../styles/components/home.css";
 import monData from "../json/monData.json";
 
 const Hero = () => {
-  const [currentMon, setCurrentMon] = useState({
-    Index: 181,
-    Series: 2,
-    Name: "Iruvial",
-    Epithets: "The Foremost Enticer",
-    Description:
-      "A beautiful, long-haired man with a serpent's tail. He is said to be one of the first Gods, and the father of all earthly creatures. He is also said to bring temptation wherever he goes.",
-    Image: "towel-candidacy-afterthought_norm_m7_OPT.gif",
-    ImageHash: "QmRkZYmHLjBmddDUnZzkcXk8MV1WeuonPXMJ5KmoLPFDiU",
-    InputHash: "Qmd3tRqmcHBy2DSkQLwuCcjsYR2gb7dJJwmQzvo4yGHddZ",
-    StaticHash: "QmPZ5xHtj2NVEfkCWeAtcn7gpYTHvzN29DFetb3tBDCzb6",
-    Color: "rainbow",
-  });
+  const [showTexts, setShowTexts] = useState(false);
+  const [monIndex, setMonIndex] = useState(181);
+
+  function randomize() {
+    setMonIndex(Math.floor(Math.random() * 341));
+  }
 
   return (
     <>
@@ -52,24 +45,32 @@ const Hero = () => {
               <div>
                 <div className="name">
                   <b>
-                    #{currentMon.Index} {currentMon.Name}
+                    #{monData[monIndex].Index} {monData[monIndex].Name}
                   </b>
                 </div>
-                <div>{currentMon.Epithets}</div>
-                <img
-                  className="thumbnail centered-image"
-                  src={`https://raw.githubusercontent.com/0xmons/0xmons/0efef2826b799eb8e5d13e832fb950dfceaead24/src/assets/final-sprites/${currentMon.Image}`}
-                  loading="lazy"
-                  alt=""
-                />
-                <div></div>
+                <div>{monData[monIndex].Epithets}</div>
+                {!showTexts ? (
+                  <>
+                    <img
+                      className="thumbnail centered-image"
+                      src={`https://raw.githubusercontent.com/0xmons/0xmons/0efef2826b799eb8e5d13e832fb950dfceaead24/src/assets/final-sprites/${monData[monIndex].Image}`}
+                      loading="lazy"
+                      alt=""
+                    />
+                  </>
+                ) : (
+                  <div>
+                    <hr />
+                    {monData[monIndex].Description}
+                  </div>
+                )}
               </div>
             </div>
             <div className="button-holder centered">
-              <button onClick="flip()">
+              <button onClick={() => setShowTexts((prevShow) => !prevShow)}>
                 Flip <span className="grayscale-emoji">🔄</span>
               </button>
-              <button onClick="loadRandomMon()">
+              <button onClick={() => randomize()}>
                 Random <span className="grayscale-emoji">🔀</span>
               </button>
             </div>
@@ -86,12 +87,13 @@ const Hero = () => {
             href="https://opensea.io/assets/0xmons-xyz"
             target="_blank"
             rel="noopener noreferrer"
+            className="flex"
           >
             0xmons on OpenSea
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 116 116"
-              className="opensea-logo"
+              className="opensea-logo ml-4"
             >
               <path
                 fill="#FFF"
