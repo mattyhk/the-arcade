@@ -11,7 +11,7 @@ const Hero = () => {
   }
 
   return (
-    <>
+    <main>
       <div className="cursed-text header">
         NEURAL NET GENERATED PIXEL MONSTERS
       </div>
@@ -166,7 +166,7 @@ const Hero = () => {
           />
         </div>
       </div>
-    </>
+    </main>
   );
 };
 
