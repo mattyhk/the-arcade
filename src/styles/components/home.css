@@ -1,0 +1,151 @@
+button:hover {
+  border: 3px solid var(--gray) !important;
+}
+
+button > a {
+  color: unset;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 75rem;
+}
+
+.cursed-text {
+  text-shadow: 2px -2px var(--med-green), -2px 2px var(--pink);
+  font-style: normal;
+}
+
+.cursed-text-small {
+  text-shadow: 1.5px -1.5px var(--med-green), -1.5px 1.5px var(--pink);
+  /* text-shadow: 1px -1px var(--med-green), -1px 1px var(--pink); */
+}
+
+.header {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 4rem;
+}
+
+.sub-header {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.text-wrapper {
+  padding: 0.5rem 0.75rem;
+}
+
+.text {
+  font-size: 1.25rem;
+}
+
+.two-cols {
+  column-gap: 2rem;
+}
+
+.grayscale-emoji {
+  filter: grayscale(1);
+}
+
+.mon-wrapper-holder {
+  padding-top: 2rem;
+  margin: auto;
+}
+
+.name {
+  color: white;
+}
+
+.mon-item {
+  cursor: pointer;
+  margin: 0.5rem 0.5rem;
+  padding: 1rem 1rem;
+  border: 3px solid var(--dark-gray);
+  border-radius: 4px;
+  width: 18rem;
+  min-height: 15rem;
+}
+
+.mon-item:hover {
+  border: 3px solid var(--gray);
+}
+
+.centered-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.5rem;
+}
+
+.button-holder > button {
+  margin: 0.5rem 0.5rem;
+  text-transform: none;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  color: white;
+  border: 3px solid var(--dark-gray);
+  border-radius: 4px;
+}
+
+.opensea-bar {
+  margin-top: 3rem;
+  background-color: var(--darkest-gray);
+  padding: 1rem;
+}
+
+.view-button {
+  color: var(--med-green) !important;
+}
+
+.opensea-button,
+.view-button {
+  font-size: 1.5rem !important;
+  padding: 1rem;
+}
+
+.xmon-squid {
+  filter: sepia(1) saturate(2.5) hue-rotate(90deg);
+}
+
+.opensea-logo {
+  width: 1.5rem;
+  height: auto;
+  vertical-align: middle;
+}
+
+.on-chain-section {
+  margin-top: 4rem;
+}
+
+.encode-image-wrapper {
+  margin: auto;
+}
+
+.encode-image {
+  width: 30rem;
+  height: auto;
+}
+
+.ecosystem-section {
+  margin-top: 4rem;
+}
+
+@media only screen and (max-width: 868px) {
+  .two-cols {
+    display: block;
+  }
+}
+@media only screen and (max-width: 868px) {
+  .mon-item {
+    margin: auto;
+  }
+  .encode-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+}
