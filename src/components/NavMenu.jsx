@@ -28,14 +28,18 @@ const NavMenu = () => {
           </button>
 
           <div className="menu-item">
-            <a href="/#" title="Home page">
+            <a href="/#" title="Home page" onClick={() => setIsOpened(false)}>
               HOME
             </a>
           </div>
 
           <div className="menu-item">
-            <a href="/#" title="View all 0xmons">
-              0XMONS
+            <a
+              href="/snake"
+              title="View Snake game"
+              onClick={() => setIsOpened(false)}
+            >
+              SNAKE
             </a>
           </div>
         </div>
