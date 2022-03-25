@@ -5,6 +5,20 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 const SnakeGame = () => {
   const [hasVerified, setHasVerified] = useState(false);
 
+  useEffect(() => {
+    function disableKeyScroll(e) {
+      if (
+        ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1
+      ) {
+        e.preventDefault();
+      }
+    }
+
+    window.addEventListener("keydown", disableKeyScroll);
+
+    return () => window.removeEventListener("keydown", disableKeyScroll);
+  }, []);
+
   return (
     <main>
       <div className="mt-8 w-full"></div>
