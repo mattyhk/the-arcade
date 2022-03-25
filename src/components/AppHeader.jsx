@@ -27,6 +27,7 @@ const AppHeader = () => {
       if (userAddress) {
         await Moralis.User.logOut();
         await Moralis.cleanup();
+        alert("Successfully logged out!");
         window.location.reload();
         return;
       }
