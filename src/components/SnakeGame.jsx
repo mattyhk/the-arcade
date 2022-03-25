@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Snake from "react-simple-snake";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
+import SnakeLeaderboard from "./SnakeLeaderboard";
 
 const SnakeGame = () => {
-  const [hasVerified, setHasVerified] = useState(false);
+  const [hasVerified, setHasVerified] = useState(true);
 
   useEffect(() => {
     function disableKeyScroll(e) {
@@ -23,7 +24,19 @@ const SnakeGame = () => {
     <main>
       <div className="mt-8 w-full"></div>
       {hasVerified ? (
-        <Snake snakeColor="#6081a9" appleColor="#66dfcd" percentageWidth={50} />
+        <>
+          <div className="md:w-6/12 mx-auto w-11/12">
+            <Snake
+              snakeColor="#6081a9"
+              appleColor="#66dfcd"
+              percentageWidth={100}
+            />
+          </div>
+
+          <div className="md:mt-28 mt-16 flex justify-center">
+            <SnakeLeaderboard />
+          </div>
+        </>
       ) : (
         <div className="flex justify-center items-center h-80">
           <HCaptcha
