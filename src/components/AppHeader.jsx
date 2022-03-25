@@ -17,8 +17,6 @@ const AppHeader = () => {
   }, [isInitialized]);
 
   async function toggleConnectWallet() {
-    console.log(window.ethereum);
-    console.log(window.web3);
     if (!window.ethereum) {
       alert("MetaMask wallet is not detected!");
       window.open("https://metamask.io/download/", "_blank");
@@ -32,8 +30,11 @@ const AppHeader = () => {
         window.location.reload();
         return;
       }
-      await Moralis.enableWeb3();
+      const web3 = await Moralis.enableWeb3();
       await Moralis.authenticate({ signingMessage: "Authenticate on 0xmons" });
+      if (![1, "0x1"].includes(web3._network.chainId)) {
+        await Moralis.switchNetwork(1);
+      }
       setUserAddress(Moralis?.User?.current()?.get("ethAddress") ?? "");
     } catch {}
   }
