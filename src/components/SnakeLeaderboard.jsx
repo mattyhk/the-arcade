@@ -63,11 +63,66 @@ const SnakeLeaderboard = () => {
 
   const data = [
     {
-      rank: 1,
       name: "Test",
       score: 999,
     },
-  ];
+    {
+      name: "Test",
+      score: 999,
+    },
+
+    {
+      name: "Test",
+      score: 999,
+    },
+
+    {
+      name: "Test",
+      score: 999,
+    },
+
+    {
+      name: "Test100",
+      score: 100,
+    },
+
+    {
+      name: "Test",
+      score: 999,
+    },
+
+    {
+      name: "Test",
+      score: 999,
+    },
+
+    {
+      name: "Test",
+      score: 999,
+    },
+
+    {
+      name: "TestLow",
+      score: 99,
+    },
+
+    {
+      name: "Test",
+      score: 999,
+    },
+
+    {
+      name: "Test",
+      score: 999,
+    },
+  ]
+    .sort((a, b) => parseFloat(b.score) - parseFloat(a.score))
+    .map((record, index) => {
+      return {
+        ...record,
+        rank: index + 1,
+      };
+    });
 
   return <Table columns={columns} data={data} />;
 };
