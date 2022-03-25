@@ -36,7 +36,15 @@ const AppHeader = () => {
         await Moralis.switchNetwork(1);
       }
       setUserAddress(Moralis?.User?.current()?.get("ethAddress") ?? "");
-    } catch {}
+    } catch (err) {
+      if (!err?.code) {
+        alert("Please try again after refresh");
+        window.location.reload();
+        return;
+      }
+      if (err.code === 4001) return;
+      alert(err.message);
+    }
   }
 
   return (
