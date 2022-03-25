@@ -34,7 +34,6 @@ function Table({ columns, data }) {
       <table {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => {
-            console.log(headerGroup);
             return (
               <tr {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map((column) => (
@@ -53,7 +52,6 @@ function Table({ columns, data }) {
             return (
               <tr {...row.getRowProps()}>
                 {row.cells.map((cell) => {
-                  console.log(cell);
                   return (
                     <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
                   );

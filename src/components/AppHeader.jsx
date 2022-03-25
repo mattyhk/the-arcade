@@ -17,6 +17,14 @@ const AppHeader = () => {
   }, [isInitialized]);
 
   async function toggleConnectWallet() {
+    console.log(window.ethereum);
+    console.log(window.web3);
+    if (!window.ethereum) {
+      alert("MetaMask wallet is not detected!");
+      window.open("https://metamask.io/download/", "_blank");
+      return;
+    }
+
     try {
       if (userAddress) {
         await Moralis.User.logOut();
