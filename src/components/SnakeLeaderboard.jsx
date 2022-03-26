@@ -120,58 +120,18 @@ const SnakeLeaderboard = () => {
   // -- leaderboard hardcoded data -- START
   const data = [
     {
-      name: "Test",
-      score: 999,
+      name: "Player X",
+      score: 356,
     },
     {
-      name: "Test",
-      score: 999,
+      name: "Kong",
+      score: 200,
     },
 
     {
-      name: "Test",
-      score: 999,
-    },
-
-    {
-      name: "Test",
-      score: 999,
-    },
-
-    {
-      name: "Test100",
-      score: 100,
-    },
-
-    {
-      name: "Test",
-      score: 999,
-    },
-
-    {
-      name: "Test",
-      score: 999,
-    },
-
-    {
-      name: "Test",
-      score: 999,
-    },
-
-    {
-      name: "TestLow",
-      score: 99,
-    },
-
-    {
-      name: "Test",
-      score: 999,
-    },
-
-    {
-      name: "Test",
-      score: 999,
-    },
+      name: "PwNed",
+      score: 5,
+    }
   ]
     .sort((a, b) => parseFloat(b.score) - parseFloat(a.score))
     .map((record, index) => {

@@ -17,7 +17,8 @@ const AppHeader = () => {
   }, [isInitialized]);
 
   async function toggleConnectWallet() {
-    if (!window.ethereum) {
+    alert("Under construction")
+    {/* if (!window.ethereum) {
       alert("MetaMask wallet is not detected!");
       window.open("https://metamask.io/download/", "_blank");
       return;
@@ -45,7 +46,7 @@ const AppHeader = () => {
       }
       if (err.code === 4001) return;
       alert(err.message);
-    }
+    } */}
   }
 
   return (
