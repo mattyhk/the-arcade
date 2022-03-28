@@ -21,8 +21,7 @@ const SnakeGame = () => {
   }, []);
 
   return (
-    <main>
-      <div className="mt-8 w-full"></div>
+    <main className="pt-24">
       {hasVerified ? (
         <>
           <div className="md:w-6/12 mx-auto w-11/12">
