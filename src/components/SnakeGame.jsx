@@ -4,7 +4,7 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 import SnakeLeaderboard from "./SnakeLeaderboard";
 
 const SnakeGame = () => {
-  const [hasVerified, setHasVerified] = useState(true);
+  const [hasVerified, setHasVerified] = useState(false);
 
   useEffect(() => {
     function disableKeyScroll(e) {
