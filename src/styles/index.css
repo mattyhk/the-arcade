@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* font-family: "Courier Prime", monospace; */
-
 @font-face {
   font-family: "Lucida Console", "Courier New", Courier, monospace;
   src: url("./fonts/lucida-console.ttf") format("truetype");
