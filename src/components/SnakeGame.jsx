@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Snake from "react-simple-snake";
+import Snake from "@yewyewxd/react-simple-snake";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import SnakeLeaderboard from "./SnakeLeaderboard";
 
