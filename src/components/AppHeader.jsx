@@ -17,36 +17,36 @@ const AppHeader = () => {
   }, [isInitialized]);
 
   async function toggleConnectWallet() {
-    alert("Under construction")
-    {/* if (!window.ethereum) {
-      alert("MetaMask wallet is not detected!");
-      window.open("https://metamask.io/download/", "_blank");
-      return;
-    }
+    alert("Under construction");
+    //  if (!window.ethereum) {
+    //     alert("MetaMask wallet is not detected!");
+    //     window.open("https://metamask.io/download/", "_blank");
+    //     return;
+    //   }
 
-    try {
-      if (userAddress) {
-        await Moralis.User.logOut();
-        await Moralis.cleanup();
-        alert("Successfully logged out!");
-        window.location.reload();
-        return;
-      }
-      const web3 = await Moralis.enableWeb3();
-      await Moralis.authenticate({ signingMessage: "Authenticate on 0xmons" });
-      if (![1, "0x1"].includes(web3._network.chainId)) {
-        await Moralis.switchNetwork(1);
-      }
-      setUserAddress(Moralis?.User?.current()?.get("ethAddress") ?? "");
-    } catch (err) {
-      if (!err?.code) {
-        alert("Please try again after refresh");
-        window.location.reload();
-        return;
-      }
-      if (err.code === 4001) return;
-      alert(err.message);
-    } */}
+    //   try {
+    //     if (userAddress) {
+    //       await Moralis.User.logOut();
+    //       await Moralis.cleanup();
+    //       alert("Successfully logged out!");
+    //       window.location.reload();
+    //       return;
+    //     }
+    //     const web3 = await Moralis.enableWeb3();
+    //     await Moralis.authenticate({ signingMessage: "Authenticate on 0xmons" });
+    //     if (![1, "0x1"].includes(web3._network.chainId)) {
+    //       await Moralis.switchNetwork(1);
+    //     }
+    //     setUserAddress(Moralis?.User?.current()?.get("ethAddress") ?? "");
+    //   } catch (err) {
+    //     if (!err?.code) {
+    //       alert("Please try again after refresh");
+    //       window.location.reload();
+    //       return;
+    //     }
+    //     if (err.code === 4001) return;
+    //     alert(err.message);
+    //   }
   }
 
   return (
