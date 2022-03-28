@@ -1,10 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Snake from "@yewyewxd/react-simple-snake";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import SnakeLeaderboard from "./SnakeLeaderboard";
 
 const SnakeGame = () => {
   const [hasVerified, setHasVerified] = useState(true);
+
+  useEffect(() => {
+    function disableKeyScroll(e) {
+      if (
+        ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1
+      ) {
+        e.preventDefault();
+      }
+    }
+
+    window.addEventListener("keydown", disableKeyScroll);
+
+    return () => window.removeEventListener("keydown", disableKeyScroll);
+  }, []);
 
   return (
     <main className="pt-24">
