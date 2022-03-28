@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import NavMenu from "./NavMenu";
 import "../styles/components/header.css";
 import { useMoralis } from "react-moralis";
+import Popup from "./Popup";
 
 const AppHeader = () => {
   const { Moralis, isInitialized } = useMoralis();
   const [userAddress, setUserAddress] = useState("");
+  const [isModalOpened, setIsModalOpened] = useState(false);
 
   useEffect(() => {
     if (!isInitialized) return;
@@ -17,7 +19,7 @@ const AppHeader = () => {
   }, [isInitialized]);
 
   async function toggleConnectWallet() {
-    alert("Under construction");
+    setIsModalOpened(true);
     //  if (!window.ethereum) {
     //     alert("MetaMask wallet is not detected!");
     //     window.open("https://metamask.io/download/", "_blank");
@@ -52,6 +54,7 @@ const AppHeader = () => {
   return (
     <>
       <NavMenu />
+      {isModalOpened && <Popup closeModal={() => setIsModalOpened(false)} />}
 
       <div className="wallet-holder">
         <button
