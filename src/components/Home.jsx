@@ -4,10 +4,11 @@ import monData from "../json/monData.json";
 
 const Hero = () => {
   const [showTexts, setShowTexts] = useState(false);
-  const [monIndex, setMonIndex] = useState(181);
+  const [monIndex, setMonIndex] = useState(0);
 
   function randomize() {
-    setMonIndex(Math.floor(Math.random() * 341));
+    setMonIndex(0);
+    console.log(monIndex)
   }
 
   return (
@@ -22,20 +23,19 @@ const Hero = () => {
           </div>
           <div className="text">
             <p>
-              Don't got the money but have the skill? Get the top score and get
-              the NFT.
+              Play to win blue chip NFTs for a fraction of their floors.
             </p>
             <p>
-              No more WL grind, no more gas wars. It's time we socialized NFTs
-              and make web3 fun again. May the best player win!
+              Discover new collections, enter tournaments and game with the community - may the best player win.
             </p>
             <p>
-              Each week is a new tournament with one NFT up for grabs. Top score
+              Weekly tournaments with an NFT up for grabs. Top score
               at the end wins the NFT - play as many times as you want. Top 100
-              of the leaderboard (except #1) splits 10% of the entry funds
-              raised proportionally based on their score. 60% of funds go to the
-              NFT provider, the rest goes to the community. Put your money where
-              your mouth is and compete to win in <strong>The Arcade.</strong>
+              of the leaderboard (except #1) splits 10% of the entry funds, proportionally based on your score. 60% of funds go to the
+              NFT provider, rest to the community. Everyone wins.
+            </p>
+            <p>
+              Put your money where your mouth is and compete to win in <strong>The Arcade.</strong>
             </p>
           </div>
         </div>
@@ -46,7 +46,7 @@ const Hero = () => {
               <div>
                 <div className="name">
                   <b>
-                    #{monData[monIndex].Index} {monData[monIndex].Name}
+                    {monData[monIndex].Name}
                   </b>
                 </div>
                 <div>{monData[monIndex].Epithets}</div>
@@ -54,7 +54,7 @@ const Hero = () => {
                   <>
                     <img
                       className="thumbnail centered-image"
-                      src={`https://raw.githubusercontent.com/0xmons/0xmons/0efef2826b799eb8e5d13e832fb950dfceaead24/src/assets/final-sprites/${monData[monIndex].Image}`}
+                      src={`https://is5-ssl.mzstatic.com/image/thumb/Purple117/v4/a9/98/93/a9989386-bf29-d1bb-a34d-87d986088388/source/512x512bb.jpg`}
                       loading="lazy"
                       alt=""
                     />
@@ -66,14 +66,6 @@ const Hero = () => {
                   </div>
                 )}
               </div>
-            </div>
-            <div className="button-holder centered">
-              <button onClick={() => setShowTexts((prevShow) => !prevShow)}>
-                Flip <span className="grayscale-emoji">🔄</span>
-              </button>
-              <button onClick={() => randomize()}>
-                Random <span className="grayscale-emoji">🔀</span>
-              </button>
             </div>
           </div>
         </div>

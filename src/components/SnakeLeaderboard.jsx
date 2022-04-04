@@ -106,13 +106,17 @@ const SnakeLeaderboard = () => {
         accessor: "rank",
       },
       {
-        Header: "Name",
+        Header: "Discord/Wallet",
         accessor: "name",
       },
       {
         Header: "Score",
         accessor: "score",
       },
+      {
+        Header: "Current Prize",
+        accessor: "prize"
+      }
     ],
     []
   );
@@ -122,15 +126,17 @@ const SnakeLeaderboard = () => {
     {
       name: "Player X",
       score: 356,
+      prize: "NFT"
     },
     {
       name: "Kong",
       score: 200,
+      prize: "19.5 ETH"
     },
-
     {
       name: "PwNed",
       score: 5,
+      prize: "0.5 ETH"
     }
   ]
     .sort((a, b) => parseFloat(b.score) - parseFloat(a.score))
