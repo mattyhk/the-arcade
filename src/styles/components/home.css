@@ -12,8 +12,10 @@ button > a {
 }
 
 .container {
-  width: 95%;
+  width: 92%;
   max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cursed-text {
