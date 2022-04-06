@@ -23,7 +23,7 @@ const SnakePage = ({ openModal }) => {
   }, []);
 
   return (
-    <main className="pt-24">
+    <main className="md:pt-24 pt-10">
       {hasVerified ? (
         <>
           <div className="md:w-6/12 mx-auto w-11/12">
@@ -42,7 +42,7 @@ const SnakePage = ({ openModal }) => {
             </button>
           </div>
 
-          <div className="md:mt-28 mt-16 flex items-center justify-center gap-16">
+          <div className="md:mt-28 mt-16 flex md:flex-row flex-col items-center justify-center md:gap-16 gap-6">
             <div className="flex">
               <img
                 className="h-64 w-64"
