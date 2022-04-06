@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../styles/components/home.css";
 import monData from "../json/monData.json";
-import Popup from "./Popup";
+import Popup from "../components/Popup";
 
-const Hero = () => {
+const HomePage = () => {
   const [isModalOpened, setIsModalOpened] = useState(false);
 
   return (
@@ -76,7 +76,7 @@ const Hero = () => {
       <div className="button-holder centered opensea-bar mb-12 flex justify-center items-center gap-20">
         <button className="opensea-button">
           <a
-            href="/gallery"
+            href="/gal"
             target="_blank"
             rel="noopener noreferrer"
             className="flex"
@@ -193,4 +193,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HomePage;

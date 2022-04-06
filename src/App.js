@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AppFooter from "./components/AppFooter";
 import AppHeader from "./components/AppHeader";
-import Home from "./components/Home";
-import SnakeGame from "./components/SnakeGame";
+import HomePage from "./pages/Home";
+import SnakePage from "./pages/Snake";
+import GalleryPage from "./pages/Gallery";
 
 function App() {
   return (
@@ -11,9 +12,9 @@ function App() {
 
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/snake" element={<SnakeGame />} />
-          <Route path="/gallery" element={<SnakeGame />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/snake" element={<SnakePage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
         </Routes>
       </BrowserRouter>
 

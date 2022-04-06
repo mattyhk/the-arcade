@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Snake from "@yewyewxd/react-simple-snake";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
-import SnakeLeaderboard from "./SnakeLeaderboard";
+import SnakeLeaderboard from "../components/Snake/SnakeLeaderboard";
 
-const SnakeGame = () => {
+const SnakePage = () => {
   const [hasVerified, setHasVerified] = useState(false);
 
   useEffect(() => {
@@ -52,4 +52,4 @@ const SnakeGame = () => {
   );
 };
 
-export default SnakeGame;
+export default SnakePage;

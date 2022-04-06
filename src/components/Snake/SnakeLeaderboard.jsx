@@ -1,6 +1,6 @@
 import React from "react";
 import { useTable, usePagination } from "react-table";
-import "../styles/components/table.css";
+import "../../styles/components/table.css";
 
 function Table({ columns, data }) {
   // Use the state and functions returned from useTable to build your UI
@@ -115,8 +115,8 @@ const SnakeLeaderboard = () => {
       },
       {
         Header: "Current Prize",
-        accessor: "prize"
-      }
+        accessor: "prize",
+      },
     ],
     []
   );
@@ -126,18 +126,18 @@ const SnakeLeaderboard = () => {
     {
       name: "Player X",
       score: 356,
-      prize: "NFT"
+      prize: "NFT",
     },
     {
       name: "Kong",
       score: 200,
-      prize: "19.5 ETH"
+      prize: "19.5 ETH",
     },
     {
       name: "PwNed",
       score: 5,
-      prize: "0.5 ETH"
-    }
+      prize: "0.5 ETH",
+    },
   ]
     .sort((a, b) => parseFloat(b.score) - parseFloat(a.score))
     .map((record, index) => {
