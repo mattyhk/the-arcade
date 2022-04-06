@@ -1,16 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/components/home.css";
 import monData from "../json/monData.json";
 
 const Hero = () => {
-  const [showTexts, setShowTexts] = useState(false);
-  const [monIndex, setMonIndex] = useState(0);
-
-  function randomize() {
-    setMonIndex(0);
-    console.log(monIndex)
-  }
-
   return (
     <main>
       <div className="cursed-text header">The Arcade</div>
@@ -22,20 +14,21 @@ const Hero = () => {
             <span className="cursed-text-small"> wIn NFTs </span>
           </div>
           <div className="text">
+            <p>Play to win blue chip NFTs for a fraction of their floors.</p>
             <p>
-              Play to win blue chip NFTs for a fraction of their floors.
+              Discover new collections, enter tournaments and game with the
+              community - may the best player win.
             </p>
             <p>
-              Discover new collections, enter tournaments and game with the community - may the best player win.
+              Weekly tournaments with an NFT up for grabs. Top score at the end
+              wins the NFT - play as many times as you want. Top 100 of the
+              leaderboard (except #1) splits 10% of the entry funds,
+              proportionally based on your score. 60% of funds go to the NFT
+              provider, rest to the community. Everyone wins.
             </p>
             <p>
-              Weekly tournaments with an NFT up for grabs. Top score
-              at the end wins the NFT - play as many times as you want. Top 100
-              of the leaderboard (except #1) splits 10% of the entry funds, proportionally based on your score. 60% of funds go to the
-              NFT provider, rest to the community. Everyone wins.
-            </p>
-            <p>
-              Put your money where your mouth is and compete to win in <strong>The Arcade.</strong>
+              Put your money where your mouth is and compete to win in{" "}
+              <strong>The Arcade.</strong>
             </p>
           </div>
         </div>
@@ -45,12 +38,16 @@ const Hero = () => {
             <div className="mon-item">
               <div>
                 <div className="name">
-                  <b>
-                    {monData[monIndex].Name}
-                  </b>
+                  <b>{monData[0].Name}</b>
                 </div>
-                <div>{monData[monIndex].Epithets}</div>
-                {!showTexts ? (
+                <div>{monData[0].Epithets}</div>
+                <img
+                  className="thumbnail centered-image"
+                  src={`https://is5-ssl.mzstatic.com/image/thumb/Purple117/v4/a9/98/93/a9989386-bf29-d1bb-a34d-87d986088388/source/512x512bb.jpg`}
+                  loading="lazy"
+                  alt=""
+                />
+                {/* {!showTexts ? (
                   <>
                     <img
                       className="thumbnail centered-image"
@@ -64,7 +61,7 @@ const Hero = () => {
                     <hr />
                     {monData[monIndex].Description}
                   </div>
-                )}
+                )} */}
               </div>
             </div>
           </div>
