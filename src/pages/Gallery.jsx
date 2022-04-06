@@ -27,13 +27,19 @@ const GalleryPage = () => {
                   <div className="flex flex-col text-right">
                     <div className="mb-1">
                       <Countdown
-                        renderer={({ hours, minutes, seconds, completed }) => {
+                        renderer={({
+                          hours,
+                          minutes,
+                          seconds,
+                          completed,
+                          days,
+                        }) => {
                           if (completed) {
                             return <span>Winner</span>;
                           } else {
                             return (
                               <span>
-                                {hours}h {minutes}m {seconds}s
+                                {days ? `${days}d` : ""} {hours}h {minutes}m
                               </span>
                             );
                           }
@@ -74,20 +80,7 @@ const GalleryPage = () => {
 
                   <div className="flex flex-col text-right justify-between">
                     <div className="mb-1">
-                      <Countdown
-                        renderer={({ hours, minutes, seconds, completed }) => {
-                          if (completed) {
-                            return <span>Winner</span>;
-                          } else {
-                            return (
-                              <span>
-                                {hours}h {minutes}m {seconds}s
-                              </span>
-                            );
-                          }
-                        }}
-                        date={tour.started}
-                      />
+                      <span>Winner</span>
                     </div>
 
                     <div className="flex flex-col">

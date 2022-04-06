@@ -12,6 +12,7 @@ button > a {
 }
 
 .container {
+  width: 95%;
   max-width: 75rem;
 }
 
