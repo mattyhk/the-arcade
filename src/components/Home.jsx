@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/components/home.css";
 import monData from "../json/monData.json";
+import Popup from "./Popup";
 
 const Hero = () => {
+  const [isModalOpened, setIsModalOpened] = useState(false);
+
   return (
     <main>
+      {isModalOpened && <Popup closeModal={() => setIsModalOpened(false)} />}
+
       <div className="cursed-text header">The Arcade</div>
 
       <div className="two-cols container">
@@ -68,15 +73,25 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="button-holder centered opensea-bar mb-12">
+      <div className="button-holder centered opensea-bar mb-12 flex justify-center items-center gap-20">
         <button className="opensea-button">
           <a
-            href="/snake"
+            href="/gallery"
             target="_blank"
             rel="noopener noreferrer"
             className="flex"
           >
             Play
+          </a>
+        </button>
+
+        <button className="opensea-button">
+          <a
+            onClick={() => setIsModalOpened(true)}
+            href="#list"
+            className="flex"
+          >
+            List
           </a>
         </button>
       </div>
