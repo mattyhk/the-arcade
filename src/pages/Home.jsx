@@ -76,7 +76,7 @@ const HomePage = () => {
       <div className="button-holder centered opensea-bar mb-12 flex justify-center items-center gap-20">
         <button className="opensea-button">
           <a
-            href="/gal"
+            href="/gallery"
             target="_blank"
             rel="noopener noreferrer"
             className="flex"
