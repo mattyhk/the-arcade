@@ -5,7 +5,7 @@ import SnakeLeaderboard from "../components/Snake/SnakeLeaderboard";
 import homeStyles from "../styles/components/home.css";
 import Countdown from "react-countdown";
 
-const SnakePage = () => {
+const SnakePage = ({ openModal }) => {
   const [hasVerified, setHasVerified] = useState(true); // set this to false to reactive Captcha
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const SnakePage = () => {
 
           <div className="md:mt-28 mt-16 flex items-center justify-center">
             <button className={homeStyles[`view-button`]}>
-              <a href="#mint" className="flex p-6">
+              <a href="#mint" className="flex p-6" onClick={openModal}>
                 Mint Entry Token
               </a>
             </button>

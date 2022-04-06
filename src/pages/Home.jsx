@@ -1,15 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/components/home.css";
 import monData from "../json/monData.json";
-import Popup from "../components/Popup";
 
-const HomePage = () => {
-  const [isModalOpened, setIsModalOpened] = useState(false);
-
+const HomePage = ({ openModal }) => {
   return (
     <main>
-      {isModalOpened && <Popup closeModal={() => setIsModalOpened(false)} />}
-
       <div className="cursed-text header">The Arcade</div>
 
       <div className="two-cols container">
@@ -85,12 +80,8 @@ const HomePage = () => {
           </a>
         </button>
 
-        <button className="opensea-button">
-          <a
-            onClick={() => setIsModalOpened(true)}
-            href="#list"
-            className="flex"
-          >
+        <button className="opensea-button" onClick={openModal}>
+          <a href="#list" className="flex">
             List
           </a>
         </button>
