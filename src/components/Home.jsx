@@ -54,7 +54,7 @@ const Hero = () => {
                   <>
                     <img
                       className="thumbnail centered-image"
-                      src={`https://is5-ssl.mzstatic.com/image/thumb/Purple117/v4/a9/98/93/a9989386-bf29-d1bb-a34d-87d986088388/source/512x512bb.jpg`}
+                      src={`https://pbs.twimg.com/profile_images/1497370230787428354/J0qOrSCW_400x400.jpg`}
                       loading="lazy"
                       alt=""
                     />
