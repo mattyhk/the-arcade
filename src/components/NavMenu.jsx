@@ -4,6 +4,24 @@ import "../styles/components/menu.css";
 const NavMenu = () => {
   const [isOpened, setIsOpened] = useState(false);
 
+  const navItems = [
+    {
+      name: "HOME",
+      title: "Home page",
+      to: "#",
+    },
+    {
+      name: "SNAKE",
+      title: "View Snake game",
+      to: "snake",
+    },
+    {
+      name: "NFT GALLERY",
+      title: "View gallery page",
+      to: "gallery",
+    },
+  ];
+
   return (
     <div>
       {isOpened && (
@@ -27,21 +45,17 @@ const NavMenu = () => {
             🆇 CLOSE MENU
           </button>
 
-          <div className="menu-item">
-            <a href="/#" title="Home page" onClick={() => setIsOpened(false)}>
-              HOME
-            </a>
-          </div>
-
-          <div className="menu-item">
-            <a
-              href="/snake"
-              title="View Snake game"
-              onClick={() => setIsOpened(false)}
-            >
-              SNAKE
-            </a>
-          </div>
+          {navItems.map((item) => (
+            <div className="menu-item">
+              <a
+                href={`/${item.to}`}
+                title={item.title}
+                onClick={() => setIsOpened(false)}
+              >
+                {item.name}
+              </a>
+            </div>
+          ))}
         </div>
       )}
     </div>
