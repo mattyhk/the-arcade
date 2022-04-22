@@ -13,48 +13,50 @@ const GalleryPage = () => {
           {tournaments
             .filter((tour) => tour.started >= Date.now())
             .map((tour, index) => (
-              <div className="flex flex-col w-64" key={`currentTour${index}`}>
-                <div className="flex">
-                  <img className="h-64" src={tour.image} alt="" />
-                </div>
-
-                <div className="flex justify-between">
-                  <div className="flex flex-col">
-                    <div className="mb-1">{tour.collection}</div>
-                    <div>{tour.name}</div>
+              <a href="/snake">
+                <div className="flex flex-col w-64" key={`currentTour${index}`}>
+                  <div className="flex">
+                    <img className="h-64" src={tour.image} alt="" />
                   </div>
 
-                  <div className="flex flex-col text-right">
-                    <div className="mb-1">
-                      <Countdown
-                        renderer={({
-                          hours,
-                          minutes,
-                          seconds,
-                          completed,
-                          days,
-                        }) => {
-                          if (completed) {
-                            return <span>Winner</span>;
-                          } else {
-                            return (
-                              <span>
-                                {days ? `${days}d` : ""} {hours}h {minutes}m
-                              </span>
-                            );
-                          }
-                        }}
-                        date={tour.started}
-                      />
-                    </div>
-
+                  <div className="flex justify-between">
                     <div className="flex flex-col">
-                      <span className="whitespace-nowrap">Entry Pool:</span>
-                      <span className="pr-3">{tour.price}</span>
+                      <div className="mb-1">{tour.collection}</div>
+                      <div>{tour.name}</div>
+                    </div>
+
+                    <div className="flex flex-col text-right">
+                      <div className="mb-1">
+                        <Countdown
+                          renderer={({
+                            hours,
+                            minutes,
+                            seconds,
+                            completed,
+                            days,
+                          }) => {
+                            if (completed) {
+                              return <span>Winner</span>;
+                            } else {
+                              return (
+                                <span>
+                                  {days ? `${days}d` : ""} {hours}h {minutes}m
+                                </span>
+                              );
+                            }
+                          }}
+                          date={tour.started}
+                        />
+                      </div>
+
+                      <div className="flex flex-col">
+                        <span className="whitespace-nowrap">Current:</span>
+                        <span className="pr-3">{tour.price}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
         </div>
       </div>
@@ -80,11 +82,11 @@ const GalleryPage = () => {
 
                   <div className="flex flex-col text-right justify-between">
                     <div className="mb-1">
-                      <span>Winner</span>
+                      <span>{tour.winner}</span>
                     </div>
 
                     <div className="flex flex-col">
-                      <span className="whitespace-nowrap">Entry Pool:</span>
+                      <span className="whitespace-nowrap">Raised:</span>
                       <span className="pr-3">{tour.price}</span>
                     </div>
                   </div>

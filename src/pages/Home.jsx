@@ -14,7 +14,7 @@ const HomePage = ({ openModal }) => {
             <span className="cursed-text-small"> wIn NFTs </span>
           </div>
           <div className="text">
-            <p>Play to win blue chip NFTs for a fraction of their floors.</p>
+            <p>NEAR's first ever play-to-win NFT marketplace.</p>
             <p>
               Discover new collections, enter tournaments and game with the
               community - may the best player win.
@@ -35,35 +35,37 @@ const HomePage = ({ openModal }) => {
 
         <div className="mon-wrapper-holder">
           <div className="mon-wrapper">
-            <div className="mon-item">
-              <div>
-                <div className="name">
-                  <b>{monData[0].Name}</b>
-                </div>
-                <div>{monData[0].Epithets}</div>
-                <img
-                  className="thumbnail centered-image"
-                  src={`https://is5-ssl.mzstatic.com/image/thumb/Purple117/v4/a9/98/93/a9989386-bf29-d1bb-a34d-87d986088388/source/512x512bb.jpg`}
-                  loading="lazy"
-                  alt=""
-                />
-                {/* {!showTexts ? (
-                  <>
-                    <img
-                      className="thumbnail centered-image"
-                      src={`https://pbs.twimg.com/profile_images/1497370230787428354/J0qOrSCW_400x400.jpg`}
-                      loading="lazy"
-                      alt=""
-                    />
-                  </>
-                ) : (
-                  <div>
-                    <hr />
-                    {monData[monIndex].Description}
+            <a href="/snake">
+              <div className="mon-item">
+                <div>
+                  <div className="name">
+                    <b>{monData[0].Name}</b>
                   </div>
-                )} */}
+                  <div>{monData[0].Epithets}</div>
+                  <img
+                    className="thumbnail centered-image"
+                    src={require('../assets/skelly_1.png').default}
+                    loading="lazy"
+                    alt=""
+                  />
+                  {/* {!showTexts ? (
+                    <>
+                      <img
+                        className="thumbnail centered-image"
+                        src={`https://pbs.twimg.com/profile_images/1497370230787428354/J0qOrSCW_400x400.jpg`}
+                        loading="lazy"
+                        alt=""
+                      />
+                    </>
+                  ) : (
+                    <div>
+                      <hr />
+                      {monData[monIndex].Description}
+                    </div>
+                  )} */}
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -72,8 +74,6 @@ const HomePage = ({ openModal }) => {
         <button className="opensea-button">
           <a
             href="/gallery"
-            target="_blank"
-            rel="noopener noreferrer"
             className="flex"
           >
             Play
@@ -162,7 +162,7 @@ const HomePage = ({ openModal }) => {
           </div>
           <div className="text">
             <p>
-              We believe in making the NFT space fun again. No more long WL
+              We believe in making NFTs fun. No more long WL
               process, fighting with bots and going through the same steps for
               every project. It's time to reward your digital skill with digital
               rewards.

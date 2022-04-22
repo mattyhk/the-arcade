@@ -1,51 +1,41 @@
 [
   {
-    "image": "https://is5-ssl.mzstatic.com/image/thumb/Purple117/v4/a9/98/93/a9989386-bf29-d1bb-a34d-87d986088388/source/512x512bb.jpg",
-    "collection": "My collection",
-    "name": "Item name",
-    "started": 1650210576178,
-    "price": "2 ETH"
+    "image": "../images/skelly_1.png",
+    "collection": "Secret Skellies Society",
+    "name": "#330",
+    "started": 1651276800000,
+    "price": "569 N"
   },
   {
-    "image": "https://is5-ssl.mzstatic.com/image/thumb/Purple117/v4/a9/98/93/a9989386-bf29-d1bb-a34d-87d986088388/source/512x512bb.jpg",
-    "collection": "My collection",
-    "name": "Item name",
+    "image": "../images/don.png",
+    "collection": "The Dons",
+    "name": "#1435",
     "started": 1650210576178,
-    "price": "2 ETH"
+    "price": "1080 N",
+    "winner": "abc.near"
   },
   {
-    "image": "https://is5-ssl.mzstatic.com/image/thumb/Purple117/v4/a9/98/93/a9989386-bf29-d1bb-a34d-87d986088388/source/512x512bb.jpg",
-    "collection": "My collection",
+    "image": "../images/nn.jpeg",
+    "collection": "NEARNauts",
     "name": "Item name",
     "started": 1650210576178,
-    "price": "2 ETH"
+    "price": "863 N",
+    "winner": "gamer.near"
   },
   {
-    "image": "https://is5-ssl.mzstatic.com/image/thumb/Purple117/v4/a9/98/93/a9989386-bf29-d1bb-a34d-87d986088388/source/512x512bb.jpg",
-    "collection": "My collection",
+    "image": "../images/nt.png",
+    "collection": "NEARton",
     "name": "Item name",
     "started": 1650210576178,
-    "price": "2 ETH"
+    "price": "780 N",
+    "winner": "hodl.near"
   },
   {
-    "image": "https://is5-ssl.mzstatic.com/image/thumb/Purple117/v4/a9/98/93/a9989386-bf29-d1bb-a34d-87d986088388/source/512x512bb.jpg",
-    "collection": "My collection",
-    "name": "Item name",
+    "image": "../images/aac.png",
+    "collection": "Antisocial Ape Club",
+    "name": "#2405",
     "started": 1650210576178,
-    "price": "2 ETH"
-  },
-  {
-    "image": "https://is5-ssl.mzstatic.com/image/thumb/Purple117/v4/a9/98/93/a9989386-bf29-d1bb-a34d-87d986088388/source/512x512bb.jpg",
-    "collection": "My collection",
-    "name": "Item name",
-    "started": 1650210576178,
-    "price": "2 ETH"
-  },
-  {
-    "image": "https://is5-ssl.mzstatic.com/image/thumb/Purple117/v4/a9/98/93/a9989386-bf29-d1bb-a34d-87d986088388/source/512x512bb.jpg",
-    "collection": "My collection",
-    "name": "Item name",
-    "started": 1639210576178,
-    "price": "2 ETH"
+    "price": "550 N",
+    "winner": "harry.near"
   }
 ]

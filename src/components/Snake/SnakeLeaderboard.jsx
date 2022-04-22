@@ -119,11 +119,7 @@ const SnakeLeaderboard = () => {
       {
         Header: "Score",
         accessor: "score",
-      },
-      {
-        Header: "Current Prize",
-        accessor: "prize",
-      },
+      }
     ],
     []
   );
@@ -131,18 +127,18 @@ const SnakeLeaderboard = () => {
   // -- leaderboard hardcoded data -- START
   const data = [
     {
-      name: "Player X",
-      score: 356,
+      name: "playerx.near",
+      score: 559,
       prize: "NFT",
     },
     {
-      name: "Kong",
-      score: 200,
+      name: "kong.near",
+      score: 384,
       prize: "19.5 ETH",
     },
     {
-      name: "PwNed",
-      score: 5,
+      name: "pwned.near",
+      score: 15,
       prize: "0.5 ETH",
     },
   ]

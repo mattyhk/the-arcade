@@ -46,15 +46,15 @@ const SnakePage = ({ openModal }) => {
             <div className="flex">
               <img
                 className="h-64 w-64"
-                src="https://is5-ssl.mzstatic.com/image/thumb/Purple117/v4/a9/98/93/a9989386-bf29-d1bb-a34d-87d986088388/source/512x512bb.jpg"
+                src="../images/skelly_1.png"
                 alt=""
               />
             </div>
 
             <div className="flex flex-col h-full text-center p-8">
-              <div>Collection</div>
-              <div className="my-10">Item</div>
-              <div>Current Prize Pool: 20 ETH</div>
+              <div>Secret Skellies Collection</div>
+              <div className="my-10">#330</div>
+              <div>Current Prize Pool: 569 N</div>
             </div>
           </div>
 
@@ -72,7 +72,7 @@ const SnakePage = ({ openModal }) => {
                   );
                 }
               }}
-              date={1650010570178}
+              date={1651276800000}
             />
           </div>
 
